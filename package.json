@@ -14,6 +14,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.1",
+    "tslint": "^6.0.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
@@ -21,7 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-json": "json-server --watch db.json"
+    "start-json": "json-server --watch db.json",
+    "ts-lint": "tslint '**/*.{ts,tsx}' -p tsconfig.json --format verbose"
   },
   "eslintConfig": {
     "extends": "react-app"
