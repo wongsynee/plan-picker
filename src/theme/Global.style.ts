@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${theme.colours.zircon};
+    background-color: ${theme.colours.oxfordBlue};
     color: ${theme.colours.oxfordBlue};
     font: normal normal ${theme.fontWeight.regular} ${theme.fontSize.default}rem/1.2 ${theme.font.primary};
     -webkit-font-smoothing: antialiased;

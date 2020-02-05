@@ -7,8 +7,6 @@ export const HeaderWrapper = styled.header`
   padding: 2rem;
   display: flex;
   justify-content: space-between;
-  max-width: ${theme.spacer.maxWidth};
-  margin: 0 auto;
 `
 
 export const LogoImage = styled.img`
