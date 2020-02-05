@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { Helmet } from 'react-helmet'
 
-import { GlobalStyle } from './App.style'
+import { GlobalStyle } from './theme/App.style'
 
 const App = () => {
   return (
