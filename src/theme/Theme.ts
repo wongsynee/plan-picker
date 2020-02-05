@@ -13,11 +13,14 @@ const theme = {
     primary: 'Raleway, sans-serif',
   },
   fontSize: {
-    default: 16,
+    default: 1.6,
   },
   fontWeight: {
     regular: '400',
     bold: '700',
+  },
+  spacer: {
+    maxWidth: '100rem',
   },
 }
 

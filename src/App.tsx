@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react'
 import { Helmet } from 'react-helmet'
 
-import { GlobalStyle } from './theme/App.style'
+import { GlobalStyle } from './theme/Global.style'
+import PlanPicker from './pages/PlanPicker'
 
 const App = () => {
   return (
@@ -11,20 +12,7 @@ const App = () => {
         <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
       </Helmet>
       <GlobalStyle />
-      <div>
-        <header>
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <PlanPicker />
     </Fragment>
   )
 }
