@@ -17,7 +17,7 @@ yarn start
 
 Run mock APIs (Should run by default on: http://localhost:3000/):
 
-This needs to be run, as the application displays data from the API.
+This needs to be run in a separate terminal, as the application displays data from the API.
 ```sh
 yarn start-json
 ```
