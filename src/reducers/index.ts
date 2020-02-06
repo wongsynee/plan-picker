@@ -9,11 +9,17 @@ import { SET_DATA } from '../actions'
 interface IPlanPickerState {
   data?: IData[];
   interval?: Interval[];
+  paymentByWeekly?: number[];
+  paymentByFortnightly?: number[];
+  paymentByMonthly?: number[];
 }
 
 const initialState: IPlanPickerState = {
   data: undefined,
   interval: undefined,
+  paymentByWeekly: undefined,
+  paymentByFortnightly: undefined,
+  paymentByMonthly: undefined,
 }
 
 const reducer = (state = initialState, action: IAction<any>) => {
@@ -29,10 +35,11 @@ const reducer = (state = initialState, action: IAction<any>) => {
 }
 
 const dataSelector = (state: IPlanPickerState) => state.data
+
 const dataState = createSelector(
   [dataSelector],
   data => data,
-)
+  )
 
 const intervalState  = createSelector(
   [dataSelector],
@@ -50,9 +57,60 @@ const intervalState  = createSelector(
   },
 )
 
+const paymentByWeeklyState  = createSelector(
+  [dataSelector],
+  data => {
+    if (data) {
+      // Filter by weekly.
+      const weeklyIntervals = data.filter((item: IData) => {
+        return item.interval === Interval.Weekly
+      })
+      return weeklyIntervals.map((item: IData) => {
+        return item.paymentCount
+      })
+    }
+    return undefined
+  },
+)
+
+const paymentByFortnightlyState  = createSelector(
+  [dataSelector],
+  data => {
+    if (data) {
+      // Filter by fortnightly.
+      const fortnightlyIntervals = data.filter((item: IData) => {
+        return item.interval === Interval.Fortnightly
+      })
+      return fortnightlyIntervals.map((item: IData) => {
+        return item.paymentCount
+      })
+    }
+    return undefined
+  },
+)
+
+const paymentByMonthlyState  = createSelector(
+  [dataSelector],
+  data => {
+    if (data) {
+      // Filter by monthly.
+      const monthlyIntervals = data.filter((item: IData) => {
+        return item.interval === Interval.Monthly
+      })
+      return monthlyIntervals.map((item: IData) => {
+        return item.paymentCount
+      })
+    }
+    return undefined
+  },
+)
+
 const selectors = {
   data: dataState,
   interval: intervalState,
+  paymentByWeekly: paymentByWeeklyState,
+  paymentByFortnightly: paymentByFortnightlyState,
+  paymentByMonthly: paymentByMonthlyState,
 }
 
 export { reducer, selectors }

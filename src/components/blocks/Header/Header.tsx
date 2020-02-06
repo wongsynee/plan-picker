@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 
+import { PRICE } from '../../../constants/variables'
 import Logo from '../../../images/logo-openpay.png'
 import IconCart from '../../../images/icon-cart.svg'
 import {
@@ -16,7 +17,7 @@ class Header extends PureComponent {
         <LogoImage src={Logo} alt="Openpay" />
         <PriceWrapper>
           <IconImage src={IconCart} alt="Icon cart" />
-          <div>$123.45</div>
+          <div>${PRICE}</div>
         </PriceWrapper>
       </HeaderWrapper>
     )

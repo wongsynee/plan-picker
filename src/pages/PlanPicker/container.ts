@@ -8,6 +8,9 @@ import PlanPicker from '.'
 const mapStateToProps = (state: any) => {
   return ({
     interval: selectors.interval(state),
+    paymentByWeekly: selectors.paymentByWeekly(state),
+    paymentByFortnightly: selectors.paymentByFortnightly(state),
+    paymentByMonthly: selectors.paymentByMonthly(state),
   })
 }
 
