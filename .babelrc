@@ -1,0 +1,52 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "useBuiltIns": "entry",
+      "loose": true,
+      "modules": false,
+      "shippedProposals": true
+    }],
+    ["@babel/preset-react", {
+      "useBuiltIns": true,
+      "pragma": "React.createElement"
+    }],
+    "@babel/typescript"
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-class-properties", {
+      "loose": true
+    }],
+    "@babel/plugin-syntax-dynamic-import",
+    "babel-plugin-macros",
+    ["@babel/plugin-transform-runtime", {
+      "helpers": true,
+      "regenerator": true
+    }],
+    "@babel/proposal-object-rest-spread"
+  ],
+  "compact": true,
+  "env": {
+    "production": {
+      "plugins": [
+        "@babel/plugin-transform-react-constant-elements"
+      ]
+    },
+    "dev": {
+      "plugins": [
+        "dynamic-import-node-babel-7"
+      ]
+    },
+    "test": {
+      "presets": [
+        ["@babel/preset-env", {
+          "useBuiltIns": "entry",
+          "loose": true,
+          "shippedProposals": true
+        }]
+      ],
+      "plugins": [
+        "dynamic-import-node-babel-7"
+      ]
+    }
+  }
+}

@@ -9,7 +9,7 @@ import {
   SET_SELECTED_INTERVAL
 } from '../actions'
 
-interface IPlanPickerState {
+export interface IPlanPickerState {
   data?: IData[];
   interval?: Interval[];
   paymentByWeekly?: number[];
