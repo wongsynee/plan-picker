@@ -8,7 +8,8 @@ import Heading from '../../components/blocks/Heading'
 import Tabs from '../../components/blocks/Tabs'
 
 interface IPlanPicker {
-  interval?: Interval;
+  data?: any;
+  interval?: (Interval| undefined)[];
   getData(): void;
 }
 

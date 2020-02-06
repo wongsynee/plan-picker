@@ -11,8 +11,8 @@ import {
 export const GET_DATA: ISignalAction = createSignalAction(NAME, 'GET_DATA')
 
 // Sets interval data.
-export const SET_INTERVAL = createDeltaAction(NAME, 'SET_INTERVAL')
-export const setInterval: ActionCreator = createActionCreator(SET_INTERVAL)
+export const SET_DATA = createDeltaAction(NAME, 'SET_DATA')
+export const setData: ActionCreator = createActionCreator(SET_DATA)
 
 // For API Calls
 export const API__GET_DATA: ISignalAction = createSignalAction(`${NAME}/API`, 'API__GET_DATA')
