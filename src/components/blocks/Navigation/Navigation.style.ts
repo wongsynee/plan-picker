@@ -1,16 +1,21 @@
 import styled from 'styled-components'
 
-import { theme } from '../../../theme/Theme'
-
-export const NavigationWrapper = styled.button`
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
+export const NavigationWrapper = styled.nav`
   align-items: center;
   display: flex;
   justify-content: flex-start;
-  padding: 2rem;
+  padding: 2rem 3vw;
 `
+
+export const NavigationButton = styled.button`
+  display: flex;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+`
+
 export const Chevron = styled.div`
   margin-right: .8rem;
 

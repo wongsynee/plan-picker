@@ -1,13 +1,19 @@
 const theme = {
+  borderRadius: {
+    default: '.5rem',
+  },
+  boxShadow: {
+    default: '.5rem .5rem 1rem rgba(147,155,168,0.15)',
+  },
   colours: {
-    zircon: '#F4F7FF',
-    cornflowerBlue: '#6195ED',
-    oxfordBlue: '#374256',
-    blueRibbon: '#2066FD',
     white: '#FFFFFF',
+    zircon: '#F4F7FF',
     santasGray: '#9FA2AE',
-    vistaBlue: '#93DBB9',
     manatee: '#939BA8',
+    vistaBlue: '#93DBB9',
+    cornflowerBlue: '#6195ED',
+    blueRibbon: '#2066FD',
+    oxfordBlue: '#374256',
   },
   font: {
     primary: 'Raleway, sans-serif',

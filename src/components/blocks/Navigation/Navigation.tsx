@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 
 import {
   NavigationWrapper,
+  NavigationButton,
   Chevron,
 } from './Navigation.style'
 
@@ -9,8 +10,10 @@ class Navigation extends PureComponent {
   public render() {
     return (
       <NavigationWrapper>
-        <Chevron />
-        <span>Back</span>
+        <NavigationButton>
+          <Chevron />
+          <span>Back</span>
+        </NavigationButton>
       </NavigationWrapper>
     )
   }

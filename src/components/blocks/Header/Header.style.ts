@@ -4,7 +4,7 @@ import { theme } from '../../../theme/Theme'
 
 export const HeaderWrapper = styled.header`
   background: ${theme.colours.white};
-  padding: 2rem;
+  padding: 2rem 3vw;
   display: flex;
   justify-content: space-between;
 `
