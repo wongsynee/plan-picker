@@ -13,6 +13,14 @@
       "paymentCount": 12
     },
     {
+      "interval": "fortnightly",
+      "paymentCount": 4
+    },
+    {
+      "interval": "fortnightly",
+      "paymentCount": 5
+    },
+    {
       "interval": "monthly",
       "paymentCount": 2
     },
