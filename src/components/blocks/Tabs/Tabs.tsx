@@ -12,15 +12,24 @@ interface ITabs {
   paymentByWeekly?: number[];
   paymentByFortnightly?: number[];
   paymentByMonthly?: number[];
+  selectedInterval: Interval;
+  setSelectedInterval(inteval: Interval): void;
 }
 
 class Tabs extends PureComponent<ITabs> {
+  public onClickOfTab = (event: any) => {
+    const { setSelectedInterval } = this.props
+    // Set redux store's selectedInterval with button's value.
+    setSelectedInterval(event.target.value)
+  }
+
   public render() {
     const {
       interval,
       paymentByWeekly,
       paymentByFortnightly,
       paymentByMonthly,
+      selectedInterval,
     } = this.props
 
     if (interval) {
@@ -30,14 +39,16 @@ class Tabs extends PureComponent<ITabs> {
             {interval.map((item, index: number) => (
               <TabsButton
                 key={index}
-                className={index === 0 ? 'selected' : ''}
+                className={selectedInterval === item ? 'selected' : ''}
+                onClick={this.onClickOfTab}
+                value={item}
               >
                 {item}
               </TabsButton>
             ))}
           </TabsNavigation>
           <TabsContent
-            selectedTab={Interval.Weekly}
+            selectedTab={selectedInterval}
             paymentByWeekly={paymentByWeekly}
             paymentByFortnightly={paymentByFortnightly}
             paymentByMonthly={paymentByMonthly}

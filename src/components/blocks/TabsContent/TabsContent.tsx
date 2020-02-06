@@ -1,4 +1,4 @@
-import React, { Fragment, PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 
 import { PRICE } from '../../../constants/variables'
 import { Interval } from '../../../constants/enums'

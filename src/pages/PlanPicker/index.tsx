@@ -14,7 +14,9 @@ interface IPlanPicker {
   paymentByWeekly?: number[];
   paymentByFortnightly?: number[];
   paymentByMonthly?: number[];
+  selectedInterval: Interval;
   getData(): void;
+  setSelectedInterval(inteval: Interval): void;
 }
 
 class PlanPicker extends PureComponent<IPlanPicker> {
@@ -30,6 +32,8 @@ class PlanPicker extends PureComponent<IPlanPicker> {
       paymentByWeekly,
       paymentByFortnightly,
       paymentByMonthly,
+      selectedInterval,
+      setSelectedInterval,
     } = this.props
 
     return (
@@ -43,6 +47,8 @@ class PlanPicker extends PureComponent<IPlanPicker> {
             paymentByWeekly={paymentByWeekly}
             paymentByFortnightly={paymentByFortnightly}
             paymentByMonthly={paymentByMonthly}
+            selectedInterval={selectedInterval}
+            setSelectedInterval={setSelectedInterval}
           />
         </CenteredBlock>
       </Fragment>
