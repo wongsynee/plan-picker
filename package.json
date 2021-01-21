@@ -14,7 +14,7 @@
     "@types/react-redux": "^7.1.7",
     "@types/styled-components": "^4.4.2",
     "babel-plugin-dynamic-import-node-babel-7": "^2.0.7",
-    "immer": "^5.3.4",
+    "immer": "^8.0.1",
     "json-server": "^0.15.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
